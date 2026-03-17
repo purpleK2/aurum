@@ -1,0 +1,6 @@
+*.out
+build/
+aurum
+*.txt
+compile_commands.json
+.cache/
