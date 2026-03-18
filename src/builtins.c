@@ -15,8 +15,6 @@
 #include "sys/wait.h"
 #include "sys/stat.h"
 
-extern int exec_node(shell_t *sh, node_t *n);
-
 static const char *BUILTINS[] = {
     ":",
     ".",

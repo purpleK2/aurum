@@ -11,6 +11,7 @@
 #include "parser.h"
 #include "unistd.h"
 #include "sys/wait.h"
+#include "exec.h"
 
 static char *expand_one(shell_t *sh, const char *s, int in_dquote);
 static int   arith_eval(shell_t *sh, const char *expr, long *result);
@@ -242,7 +243,6 @@ static char *cmd_subst(shell_t *sh, const char *cmd) {
         memcpy(sub, sh, sizeof *sub);
         sub->subshell = 1;
         sub->input = NULL;
-        extern int exec_node(shell_t*, node_t*);
         node_t *n = parse_string(sub, cmd);
         int st = n ? exec_node(sub, n) : 0;
         node_free(n);
