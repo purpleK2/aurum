@@ -11,6 +11,7 @@
 #include "exec.h"
 #include "limits.h"
 #include "errno.h"
+#include "signal.h"
 #include "jobs.h"
 #include "sys/wait.h"
 #include "sys/stat.h"
