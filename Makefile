@@ -25,7 +25,7 @@ BINDIR := $(PREFIX)/bin
 
 all: $(TARGET)
 $(TARGET): $(OBJS)
-	gcc $(OBJS) -o $(TARGET)
+	$(LD) $(OBJS) -o $(TARGET)
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(dir $@)
